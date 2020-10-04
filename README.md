@@ -35,3 +35,9 @@ Requisitos para realizar la integración:
 <div style="text-align: center;" >
 <img src="docs/step3.png" width=800 />
 </div>
+
+6. En el caso que no funcione Agregar la siguiente linea en el archivo Package.json reemplazando lo que tiene en scripts
+ "start": "node app.js"
+ 
+7. Modificar puerto en el archivo app.js :
+app.listen(process.env.PORT || 5000)
