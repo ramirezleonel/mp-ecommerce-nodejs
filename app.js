@@ -33,13 +33,13 @@ app.get('/pending', function (req, res) {
     res.render('pending', req.query);
 });
 
-app.post('/comprar', pagarmp);
 
 app.post('/notificaciones',notificaciones)
 
+app.post('/comprar', pagarmp);
+
 app.use(express.static('assets'));
  
-
 app.use('/assets', express.static(__dirname + '/assets'));
  
 app.listen(process.env.PORT || 5000);

@@ -23,7 +23,7 @@ module.exports = (req,res) => {
             "pending": url_base +"/pending",
             "failure": url_base +"/failure",
         },
-    
+        "notification_url" : url_base+"/notificaciones",
         "external_reference": "ramirezleonel0@gmail.com",
         "payment_methods": {
            "excluded_payment_methods": [
@@ -52,9 +52,7 @@ module.exports = (req,res) => {
     mercadopago.preferences.create(preference).then(function(Response){
         // Este valor reemplazará el string "<%= global.id %>" en tu HTML
         console.log(Response.body);
-        global.init_point = Response.body.id
         res.redirect(Response.body.init_point)
-     
         }).catch(function(error){
             console.log(error);
         });
