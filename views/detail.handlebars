@@ -16,7 +16,7 @@
             </div>
         </div>
     </div>
-    <form class="as-search-results as-filter-open as-category-landing as-desktop" id="as-search-results" action="$$global.init_point$$">
+    <form class="as-search-results as-filter-open as-category-landing as-desktop" id="as-search-results" action="/comprar" method="post">
 
         <div id="accessories-tab" class="as-accessories-details">
             <div class="as-accessories" id="as-accessories">
@@ -85,7 +85,11 @@
                                 </h3>
                             </div>
                             {{!-- <a href="global.init_point" target="_blank">Pagar</a> --}}
-                            <a href="/comprar" type="submit" class="mercadopago-button">Pagar la compra</a>
+                              <input type="hidden" name="price" id="amount" value={{ price }} />
+                              <input type="hidden" name="description" value={{ title }} />
+                              <input type="hidden" name="unit" value={{ unit }} />
+                              <input type="hidden" name="image" value={{ img }} />
+                            <input class="button"  type="submit" value="Pagar la compra"></input>
                         </div>
                     </div>
                 </div>
@@ -94,8 +98,3 @@
    
     </form>
 </div>
-
-     <script
-  src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
-  data-preference-id='<%= global.id %>'>
-</script>
