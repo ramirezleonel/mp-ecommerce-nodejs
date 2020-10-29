@@ -9,12 +9,17 @@ module.exports = (req,res) => {
     
     var preference = {
         payer: {
-            "name": "Lalo Landa",
+            "name": "Lalo",
+            "surname": "Landa",
             "email": "test_user_63274575@testuser.com",
             "address": {
                 "street_name": "False",
                 "street_number": 123,
                 "zip_code": "1111"
+            },
+            "phone": {
+                "area_code": "11",
+                "number": "22223333"
             },
         },
         "auto_return": "approved",
@@ -30,6 +35,8 @@ module.exports = (req,res) => {
                 {
                     "id": "amex"
                 },
+            ],
+            "excluded_payment_types": [
                 {
                     "id": "atm"
                 }
