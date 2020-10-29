@@ -16,7 +16,7 @@
             </div>
         </div>
     </div>
-    <div class="as-search-results as-filter-open as-category-landing as-desktop" id="as-search-results">
+    <form class="as-search-results as-filter-open as-category-landing as-desktop" id="as-search-results" action="$$global.init_point$$">
 
         <div id="accessories-tab" class="as-accessories-details">
             <div class="as-accessories" id="as-accessories">
@@ -84,12 +84,18 @@
                                     {{ unit }}
                                 </h3>
                             </div>
-                            <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
+                            {{!-- <a href="global.init_point" target="_blank">Pagar</a> --}}
+                            <a href="/comprar" type="submit" class="mercadopago-button">Pagar la compra</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
    
+    </form>
+</div>
+
+     <script
+  src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
+  data-preference-id='<%= global.id %>'>
+</script>
