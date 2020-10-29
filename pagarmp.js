@@ -18,11 +18,11 @@ module.exports = (req,res) => {
             },
         },
         // "auto_return": "approved",
-        // "back_urls": {
-        //     "success": url_base +"/success",
-        //     "pending": url_base +"/pending",
-        //     "failure": url_base +"/failure",
-        // },
+        "back_urls": {
+            "success": url_base +"/success",
+            "pending": url_base +"/pending",
+            "failure": url_base +"/failure",
+        },
         "notification_url" : url_base+"/notificaciones",
         "external_reference": "ramirezleonel0@gmail.com",
         "payment_methods": {

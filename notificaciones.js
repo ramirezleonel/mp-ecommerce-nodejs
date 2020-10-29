@@ -16,6 +16,7 @@ module.exports = (req,res) => {
     console.log('Appended!');
 });
 
+    res.redirect('https://ramirezleo-mp-commerce-nodejs.herokuapp.com/failure?'+res.body)
     switch (req.body.type) {
         case 'payment':
        mercadopago.payment.findById('https://api.mercadopago.com/v1/payments/'+req.body.id).then(function(Response){})
