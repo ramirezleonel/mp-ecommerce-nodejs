@@ -1,6 +1,8 @@
 var express = require('express');
 var exphbs  = require('express-handlebars');
 var pagarmp = require('./pagarmp');
+var notificaciones = require('./notificaciones');
+
 const bodyParser = require('body-parser');
 var app = express();
  
@@ -32,6 +34,8 @@ app.get('/pending', function (req, res) {
 });
 
 app.post('/comprar', pagarmp);
+
+app.post('/notificaciones',notificaciones)
 
 app.use(express.static('assets'));
  
