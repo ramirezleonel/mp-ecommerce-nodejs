@@ -17,7 +17,7 @@ module.exports = (req,res) => {
                 "zip_code": "1111"
             },
         },
-        
+        "auto_return": "approved",
         "back_urls": {
             "success": url_base +"/success",
             "pending": url_base +"/pending",

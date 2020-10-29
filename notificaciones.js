@@ -3,8 +3,9 @@ var mercadopago = require('mercadopago');
 
 module.exports = (req,res) => {
 
-    console.log("request :"+req.body);
 
-    res.sendStatus(200);
+   console.log(req.body);
+    res.sendStatus(200)
+ 
     
 }
