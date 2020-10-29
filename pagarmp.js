@@ -1,6 +1,6 @@
 var mercadopago = require('mercadopago');
 
-var url_base = 'localhost:5000'
+var url_base = 'https://ramirezleo-mp-commerce-nodejs.herokuapp.com'
 module.exports = (req,res) => {
     mercadopago.configure({
         integrator_id: 'dev_24c65fb163bf11ea96500242ac130004',
