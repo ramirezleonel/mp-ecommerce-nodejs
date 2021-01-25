@@ -30,6 +30,9 @@ Requisitos para realizar la integración:
 <img src="docs/step2.png" width=800 />
 </div>
 
+6. El ejemplo se encuentra en https://ramirezleo-mp-commerce-nodejs.herokuapp.com/
+
+
 6. Nuevamente considerando que tu usuario de GitHub es `username` (substituir en la URL por el correcto), acceder a https://username-mp-ecommerce-nodejs.herokuapp.com/ y validar que la app esté corriendo. Deberás visualizar algo como lo siguiente
 
 <div style="text-align: center;" >
